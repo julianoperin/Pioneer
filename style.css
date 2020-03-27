@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+/* FONT FAMILY 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Cinzel', serif;
+*/
+
+/* FONT SIZE */
+body {
+  font-family: "Cormorant Garamond", serif;
+}
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+/* BUTTON */
+button {
+  padding: 1.3rem 4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+  background: black;
+  transform: scale(1.1);
+  color: white;
+}
+
+/* NAV BAR */
+.main-head {
+  background: black;
+  color: white;
+}
+nav {
+  min-height: 7vh;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+#logo {
+  font-family: "Cinzel", serif;
+  flex: 1 1 40rem;
+}
+
+nav ul {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  margin-right: 3rem;
+}
+li:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION HERO */
+.hero {
+  /* Photo */
+  height: 93vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent),
+    url("/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h3 {
+  padding: 2rem;
+}
+.hero h2 {
+  font-family: cursive;
+}
+
+/* LOCATIONS SECTION */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+    url("/img/new-york-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.locations-head {
+  position: absolute;
+  top: 14%;
+  left: 9%;
+}
+.locations-head h2 {
+  text-decoration: underline;
+  padding-bottom: 5rem;
+}
+
+.locations-head h3 {
+  line-height: 5rem;
+}
+
+/* Media Query for first section*/
+@media screen and (max-width: 550px) {
+  nav {
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  nav ul {
+    justify-content: center;
+    padding-bottom: 1.2rem;
+  }
+  nav h1 {
+    padding: 1.2rem;
+  }
+  .cloud {
+    height: 30rem;
+  }
+}
+/* CLOUDS */
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 450px;
+  width: 800px;
+  pointer-events: none;
+}
+
+.moving-cloud-1 {
+  opacity: 0.9;
+  animation: cloudAnimation 4s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 10%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 5s infinite alternate ease-in-out;
+}
+/* Cloud Animation */
+@keyframes cloudAnimation {
+  from {
+    transform: translate(15%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* BENEFITS SECTION */
+.benefits-head {
+  background: black;
+  opacity: 0.9;
+  padding: 3rem;
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* BENEFITS SECTION */
+.benefits-head h3 {
+  padding: 2rem;
+}
+
+.benefits-head h2 {
+  font-family: cursive;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  min-height: 75vh;
+}
+
+.card {
+  color: black;
+  flex: 1 1 25rem;
+  margin: 1rem 3rem;
+  padding: 1.5rem;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3), 0px 20px 20px rgba(0, 0, 0, 0.5);
+}
+.cards img {
+  height: 80px;
+  margin: 3rem;
+}
+
+.card-icon {
+  background: black;
+  opacity: 0.9;
+  border-radius: 15px;
+}
+
+.card h4 {
+  padding: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
